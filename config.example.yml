@@ -1,0 +1,11 @@
+mysql_database:
+  host: ""
+  user: ""
+  passwd: ""
+  database: ""
+slack:
+  token: ''
+  channel: ""
+sentry:
+  dsn: ""
+  rate: 0.2
