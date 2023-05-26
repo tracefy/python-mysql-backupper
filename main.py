@@ -59,7 +59,7 @@ def get_file_name(current_path):
 
 
 if __name__ == '__main__':
-    post_to_slack(':terminator-abbo: Start backup for {name}'.format(
+    post_to_slack('python-backupper - Start backup for {name}'.format(
         name=config['name']
     ), config['slack']['channel'])
     current_path = os.path.dirname(__file__)
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     sleep(10)
     print("Checking if backup file exists")
     file_size = os.path.getsize(backup_file) / (1024 * 1024)
-    post_to_slack(':terminator-abbo: Created a backup with size {file_size} mb for {name}'.format(
+    post_to_slack('python-backupper - Created a backup with size {file_size} mb for {name}'.format(
         name=config['name'],
         file_size=format(file_size, ".2f")),
         config['slack']['channel'])
